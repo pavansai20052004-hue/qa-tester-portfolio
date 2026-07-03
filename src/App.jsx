@@ -165,7 +165,7 @@ const proofProjects = [
   {
     title: 'Swag Labs Manual Testing',
     folder: 'Swag-Labs-Manual-Testing',
-    status: 'Best place for structured QA documentation',
+    status: 'Completed manual-testing proof pack with screenshots and traceability',
     links: [
       {
         label: 'Open Proof Folder',
@@ -184,7 +184,7 @@ const proofProjects = [
   {
     title: 'RentEase Testing',
     folder: 'RentEase-Testing',
-    status: 'Designed for app flow, bug, and API proof',
+    status: 'Completed app-flow proof pack with live defect evidence',
     links: [
       { label: 'Source Repo', href: 'https://github.com/pavansai20052004-hue/rentease-project' },
       { label: 'Live Demo', href: 'https://rentease-frontend-sooty.vercel.app' },
@@ -194,16 +194,17 @@ const proofProjects = [
       },
     ],
     artifacts: [
-      '10 to 15 test cases',
-      '2 to 3 bug reports',
-      'Screenshots for login, products, cart, and rental flow',
-      'Postman screenshots or collection later',
+      'Test case Excel sheet',
+      'Bug report sheet',
+      'RTM sheet',
+      'Test summary report PDF',
+      'Screenshots for dashboard, products, cart, checkout, and defect proof',
     ],
   },
   {
     title: 'HunarHub Testing',
     folder: 'HunarHub-Testing',
-    status: 'Built around role-based flow evidence',
+    status: 'Completed smoke and deployment-blocker proof pack',
     links: [
       { label: 'Source Repo', href: 'https://github.com/pavansai20052004-hue/HunarHub' },
       { label: 'Live Demo', href: 'https://hunar-hub-eight.vercel.app' },
@@ -213,10 +214,11 @@ const proofProjects = [
       },
     ],
     artifacts: [
-      'Role-based test cases',
-      'Bug reports',
-      'Screenshots for admin, entrepreneur, and customer flows',
-      'API testing screenshots later',
+      'Role-based test case sheet',
+      'Bug report sheet',
+      'RTM sheet',
+      'Test summary report PDF',
+      'Screenshots for login, registration, and production blocker evidence',
     ],
   },
 ]
@@ -779,9 +781,9 @@ function App() {
           </div>
 
           <p className="proof-note">
-            The folder structure is ready now, and I can keep adding Excel files,
-            screenshots, Postman evidence, and summary reports as each QA project
-            gets finalized.
+            The GitHub evidence repository is now populated with recruiter-ready QA
+            artifacts: Excel test cases, bug reports, RTM sheets, summary PDFs,
+            and screenshot proof for every portfolio project.
           </p>
         </section>
 
