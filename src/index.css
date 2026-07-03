@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap');
+
+:root {
+  --page-bg: #eef6fb;
+  --page-bg-deep: #dfeef8;
+  --ink-strong: #153150;
+  --ink-soft: #476480;
+  --ink-muted: #6c88a2;
+  --brand: #0e6dac;
+  --brand-2: #0a91a5;
+  --font-body: 'Manrope', 'Segoe UI', sans-serif;
+  --font-heading: 'Sora', 'Segoe UI', sans-serif;
+  --font-mono: 'Cascadia Code', 'Consolas', monospace;
+
+  color: var(--ink-strong);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.92), transparent 30%),
+    linear-gradient(180deg, var(--page-bg), var(--page-bg-deep));
+  font-family: var(--font-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(74, 126, 168, 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(74, 126, 168, 0.05) 1px, transparent 1px);
+  background-size: 120px 120px;
+  mask-image: radial-gradient(circle at center, #000 34%, transparent 92%);
+  pointer-events: none;
+  z-index: -3;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  color: var(--ink-strong);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
