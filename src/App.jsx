@@ -11,12 +11,14 @@ const profile = {
   resume: '/GJV_Pavan_Sai_QA_Resume.pdf',
   github: 'https://github.com/pavansai20052004-hue',
   linkedin: 'https://www.linkedin.com/in/gjv44',
+  qaProofRepo: 'https://github.com/pavansai20052004-hue/QA-Testing-Portfolio',
 }
 
 const navigation = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Proofs', href: '#proofs' },
   { label: 'Experience', href: '#experience' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -86,6 +88,12 @@ const projectCards = [
       'Reported a UI state defect where the Remove button remained visible after Reset App State cleared the cart count.',
     footerLabel: 'Coverage Signal',
     footerValue: '20+ cases',
+    links: [
+      {
+        label: 'Evidence Folder',
+        href: 'https://github.com/pavansai20052004-hue/QA-Testing-Portfolio/tree/main/Swag-Labs-Manual-Testing',
+      },
+    ],
   },
   {
     title: 'RentEase Rental Management Platform Testing',
@@ -106,6 +114,14 @@ const projectCards = [
       'Turned full-stack product behavior into a QA validation flow spanning UI, API, and authorization checks.',
     footerLabel: 'Testing Focus',
     footerValue: 'UI + API',
+    links: [
+      { label: 'Source Repo', href: 'https://github.com/pavansai20052004-hue/rentease-project' },
+      { label: 'Live Demo', href: 'https://rentease-frontend-sooty.vercel.app' },
+      {
+        label: 'Evidence Folder',
+        href: 'https://github.com/pavansai20052004-hue/QA-Testing-Portfolio/tree/main/RentEase-Testing',
+      },
+    ],
   },
   {
     title: 'HunarHub Skill Marketplace Testing',
@@ -126,6 +142,82 @@ const projectCards = [
       'Built stronger QA evidence for marketplace workflows where permissions and state handling matter.',
     footerLabel: 'Risk Lens',
     footerValue: 'RBAC heavy',
+    links: [
+      { label: 'Source Repo', href: 'https://github.com/pavansai20052004-hue/HunarHub' },
+      { label: 'Live Demo', href: 'https://hunar-hub-eight.vercel.app' },
+      {
+        label: 'Evidence Folder',
+        href: 'https://github.com/pavansai20052004-hue/QA-Testing-Portfolio/tree/main/HunarHub-Testing',
+      },
+    ],
+  },
+]
+
+const recruiterProofStack = [
+  'Resume PDF',
+  'GitHub QA evidence repository',
+  'Bug and workflow screenshots',
+  'Excel test cases, bug logs, and RTM sheets',
+  'Short project README notes and summary reports',
+]
+
+const proofProjects = [
+  {
+    title: 'Swag Labs Manual Testing',
+    folder: 'Swag-Labs-Manual-Testing',
+    status: 'Best place for structured QA documentation',
+    links: [
+      {
+        label: 'Open Proof Folder',
+        href: 'https://github.com/pavansai20052004-hue/QA-Testing-Portfolio/tree/main/Swag-Labs-Manual-Testing',
+      },
+    ],
+    artifacts: [
+      'Test case Excel sheet',
+      'Bug report sheet',
+      'RTM sheet',
+      'Test summary report PDF',
+      'Bug screenshots',
+      'Short README explaining test scope',
+    ],
+  },
+  {
+    title: 'RentEase Testing',
+    folder: 'RentEase-Testing',
+    status: 'Designed for app flow, bug, and API proof',
+    links: [
+      { label: 'Source Repo', href: 'https://github.com/pavansai20052004-hue/rentease-project' },
+      { label: 'Live Demo', href: 'https://rentease-frontend-sooty.vercel.app' },
+      {
+        label: 'Open Proof Folder',
+        href: 'https://github.com/pavansai20052004-hue/QA-Testing-Portfolio/tree/main/RentEase-Testing',
+      },
+    ],
+    artifacts: [
+      '10 to 15 test cases',
+      '2 to 3 bug reports',
+      'Screenshots for login, products, cart, and rental flow',
+      'Postman screenshots or collection later',
+    ],
+  },
+  {
+    title: 'HunarHub Testing',
+    folder: 'HunarHub-Testing',
+    status: 'Built around role-based flow evidence',
+    links: [
+      { label: 'Source Repo', href: 'https://github.com/pavansai20052004-hue/HunarHub' },
+      { label: 'Live Demo', href: 'https://hunar-hub-eight.vercel.app' },
+      {
+        label: 'Open Proof Folder',
+        href: 'https://github.com/pavansai20052004-hue/QA-Testing-Portfolio/tree/main/HunarHub-Testing',
+      },
+    ],
+    artifacts: [
+      'Role-based test cases',
+      'Bug reports',
+      'Screenshots for admin, entrepreneur, and customer flows',
+      'API testing screenshots later',
+    ],
   },
 ]
 
@@ -609,9 +701,88 @@ function App() {
                 </div>
 
                 <p className="project-outcome">{project.outcome}</p>
+
+                <div className="project-links">
+                  {project.links.map((link) => (
+                    <a
+                      key={link.href}
+                      className="project-link"
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
               </article>
             ))}
           </div>
+        </section>
+
+        <section className="section-card proofs-section" id="proofs">
+          <div className="proofs-header">
+            <SectionHeading
+              title="QA Proof Repository"
+              description="I have separated the strongest recruiter proof into a dedicated GitHub evidence repository so each testing project can show screenshots, spreadsheets, reports, and live product references clearly."
+            />
+
+            <a
+              className="button button-secondary"
+              href={profile.qaProofRepo}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open QA-Testing-Portfolio
+            </a>
+          </div>
+
+          <div className="proof-stack" aria-label="Strongest recruiter proof stack">
+            {recruiterProofStack.map((item) => (
+              <span key={item}>{item}</span>
+            ))}
+          </div>
+
+          <div className="proofs-grid">
+            {proofProjects.map((project) => (
+              <article key={project.title} className="proof-project-card">
+                <div className="proof-project-head">
+                  <div>
+                    <h3>{project.title}</h3>
+                    <p>{project.status}</p>
+                  </div>
+                  <span className="proof-folder">{project.folder}</span>
+                </div>
+
+                <div className="project-links proof-links">
+                  {project.links.map((link) => (
+                    <a
+                      key={link.href}
+                      className="project-link"
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+
+                <h4>Required Proofs</h4>
+                <ul className="proof-list">
+                  {project.artifacts.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+
+          <p className="proof-note">
+            The folder structure is ready now, and I can keep adding Excel files,
+            screenshots, Postman evidence, and summary reports as each QA project
+            gets finalized.
+          </p>
         </section>
 
         <section className="section-card skills-section" id="skills">

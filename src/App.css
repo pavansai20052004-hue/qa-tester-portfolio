@@ -474,6 +474,7 @@
 
 .about-section,
 .projects-section,
+.proofs-section,
 .skills-section,
 .contact-section {
   padding: 42px;
@@ -632,6 +633,121 @@
   background: rgba(232, 244, 251, 0.72);
   color: var(--ink-strong);
   font-weight: 600;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(117, 152, 181, 0.28);
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--ink-strong);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(14, 109, 172, 0.38);
+  background: rgba(234, 245, 252, 0.92);
+}
+
+.proofs-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.proof-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 28px 0 0;
+}
+
+.proof-stack span,
+.proof-folder {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(227, 240, 249, 0.9);
+  color: var(--brand);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.proofs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.proof-project-card {
+  padding: 24px;
+  border-radius: 26px;
+  border: 1px solid rgba(131, 163, 190, 0.22);
+  background: rgba(255, 255, 255, 0.84);
+}
+
+.proof-project-head {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.proof-project-head h3 {
+  margin: 0;
+}
+
+.proof-project-head p,
+.proof-note {
+  color: var(--ink-soft);
+}
+
+.proof-links {
+  margin-top: 18px;
+}
+
+.proof-project-card h4 {
+  margin: 22px 0 12px;
+  color: var(--ink-strong);
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.proof-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.proof-list li {
+  margin-bottom: 10px;
+  color: var(--ink-soft);
+}
+
+.proof-note {
+  margin: 22px 0 0;
 }
 
 .toolkit-grid {
@@ -850,6 +966,7 @@
   }
 
   .proof-strip,
+  .proofs-grid,
   .toolkit-grid,
   .contact-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -874,6 +991,7 @@
   .hero-section,
   .about-section,
   .projects-section,
+  .proofs-section,
   .skills-section,
   .experience-panel,
   .side-card,
@@ -904,6 +1022,7 @@
   .hero-details,
   .about-grid,
   .proof-strip,
+  .proofs-grid,
   .toolkit-grid,
   .contact-list {
     grid-template-columns: 1fr;
@@ -946,6 +1065,7 @@
   }
 
   .project-head,
+  .proofs-header,
   .timeline-header,
   .site-footer,
   .contact-grid {
