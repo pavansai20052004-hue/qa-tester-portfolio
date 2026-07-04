@@ -8,7 +8,7 @@ const profile = {
   phone: '+91 9502589529',
   email: 'pavansai20052004@gmail.com',
   location: 'Hyderabad, India',
-  resume: '/GJV_Pavan_Sai_QA_Resume.pdf',
+  resume: '/QA_Resume.pdf',
   github: 'https://github.com/pavansai20052004-hue',
   linkedin: 'https://www.linkedin.com/in/gjv44',
   qaProofRepo: 'https://github.com/pavansai20052004-hue/QA-Testing-Portfolio',
